@@ -14,7 +14,7 @@ class LocaleConfiguration(SubConfig):
 	# this is the default used in ISO other option for hdpi screens TER16x32
 	# can be checked using
 	# zgrep "CONFIG_FONT" /proc/config.gz
-	# https://wiki.archlinux.org/title/Linux_console#Font
+	# https://github.com/nihitdev/title/Linux_console#Font
 	console_font: str = 'default8x16'
 
 	@classmethod
@@ -69,3 +69,4 @@ class LocaleConfiguration(SubConfig):
 			default._load_config(args)
 
 		return default
+

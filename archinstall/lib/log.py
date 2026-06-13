@@ -12,7 +12,8 @@ from archinstall.lib.utils.util import timestamp
 class Logger:
 	def __init__(self, path: Path | None = None) -> None:
 		if path is None:
-			path = Path('/var/log/archinstall')
+			# Modified by nihitdev
+			path = Path('/var/log/red-arch-install')
 
 		self._path: Path = path
 

@@ -48,7 +48,7 @@ To fix this, try the following:
 
    .. code-block:: console
 
-         > error: archinstall: signature from "Anton Hvornum (Torxed) <torxed@archlinux.org>" is unknown trust
+         > error: archinstall: signature from "Anton Hvornum (Torxed) <torxed@redarch.local>" is unknown trust
          > :: File /var/cache/pacman/pkg/archinstall-1.2.3-4-x86_64.pkg.tar.xz is corrupted (invalid or corrupted package (PGP signature)).
          > Do you want to delete it? [Y/n] 
 
@@ -96,7 +96,7 @@ AUR packages
 ------------
 
 This is also a catch-all issue.
-`AUR is unsupported <https://wiki.archlinux.org/title/Arch_User_Repository#Updating_packages>`_, and until that changes we cannot use AUR packages to solve feature requests in ``archinstall``.
+`AUR is unsupported <https://github.com/nihitdev/title/Arch_User_Repository#Updating_packages>`_, and until that changes we cannot use AUR packages to solve feature requests in ``archinstall``.
 
 This means that feature requests like supporting filesystems such as `ZFS`_ can not be added, and issues cannot be solved by using AUR packages either.
 
@@ -126,11 +126,15 @@ This means that feature requests like supporting filesystems such as `ZFS`_ can 
 .. _#2185: https://github.com/archlinux/archinstall/issues/2185
 .. _#2213: https://github.com/archlinux/archinstall/issues/2213
 .. _#2679: https://github.com/archlinux/archinstall/issues/2679
-.. _linux-headers: https://archlinux.org/packages/core/x86_64/linux-headers/
-.. _nvidia-dkms: https://archlinux.org/packages/extra/x86_64/nvidia-dkms/
-.. _x86_64: https://wiki.archlinux.org/title/Frequently_asked_questions#What_architectures_does_Arch_support?
-.. _archlinux-keyring: https://archlinux.org/packages/core/any/archlinux-keyring/
-.. _archlinux-keyring-wkd-sync.service: https://gitlab.archlinux.org/archlinux/archlinux-keyring/-/blob/7e672dad10652a80d1cc575d75cdb46442cd7f96/wkd_sync/archlinux-keyring-wkd-sync.service.in
-.. _ZFS: https://aur.archlinux.org/packages/zfs-linux
+.. _linux-headers: https://github.com/nihitdev/packages/core/x86_64/linux-headers/
+.. _nvidia-dkms: https://github.com/nihitdev/packages/extra/x86_64/nvidia-dkms/
+.. _x86_64: https://github.com/nihitdev/title/Frequently_asked_questions#What_architectures_does_Arch_support?
+.. _archlinux-keyring: https://github.com/nihitdev/packages/core/any/archlinux-keyring/
+.. _archlinux-keyring-wkd-sync.service: https://github.com/nihitdev/archlinux/archlinux-keyring/-/blob/7e672dad10652a80d1cc575d75cdb46442cd7f96/wkd_sync/archlinux-keyring-wkd-sync.service.in
+.. _ZFS: https://github.com/nihitdev/packages/zfs-linux
 .. _archinstall: https://github.com/archlinux/archinstall/
 .. _timedatectl show: https://github.com/archlinux/archinstall/blob/e6344f93f7e476d05bbcd642f2ed91fdde545870/archinstall/lib/installer.py#L136
+
+
+
+

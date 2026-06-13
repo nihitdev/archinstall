@@ -1,6 +1,6 @@
 [Match]
 # Matching with "Type=ether" causes issues with containers because it also matches virtual Ethernet interfaces (veth*).
-# See https://bugs.archlinux.org/task/70892
+# See https://github.com/nihitdev/task/70892
 # Instead match by globbing the network interface name.
 Name=en*
 Name=eth*

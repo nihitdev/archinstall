@@ -1,4 +1,5 @@
 # These are supported funding model platforms
 
 github: [archlinux]
-custom: ['https://archlinux.org/donate/']
+custom: ['https://github.com/nihitdev/donate/']
+

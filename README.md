@@ -2,10 +2,11 @@
 <img src="https://github.com/archlinux/archinstall/raw/master/docs/logo.png" alt="drawing" width="200"/>
 
 <!-- </div> -->
-# Arch Installer
-[![Lint Python and Find Syntax Errors](https://github.com/archlinux/archinstall/actions/workflows/flake8.yaml/badge.svg)](https://github.com/archlinux/archinstall/actions/workflows/flake8.yaml)
+# Red Arch Installer (by nihitdev)
+[![Lint Python and Find Syntax Errors](https://github.com/nihitdev/archinstall/actions/workflows/flake8.yaml/badge.svg)](https://github.com/nihitdev/archinstall/actions/workflows/flake8.yaml)
 
-Just another guided/automated [Arch Linux](https://wiki.archlinux.org/index.php/Arch_Linux) installer with a twist.
+Red Arch by nihitdev – a custom Arch Linux ISO with red branding.
+Just another guided/automated [Arch Linux](https://github.com/nihitdev/index.php/Arch_Linux) installer with a twist.
 The installer also doubles as a python library to install Arch Linux and manage services, packages, and other things inside the installed system *(Usually from a live medium or from an existing installation)*.
 
 * archinstall [discord](https://discord.gg/aDeMffrxNg) server
@@ -23,7 +24,7 @@ pacman -Sy archinstall
 archinstall
 ```
 
-Alternative ways to install are `git clone` the repository (and is better since you get the latest code regardless of [build date](https://archlinux.org/packages/?sort=&q=archinstall)) or `pip install --upgrade archinstall`.
+Alternative ways to install are `git clone` the repository (and is better since you get the latest code regardless of [build date](https://github.com/nihitdev/packages/?sort=&q=archinstall)) or `pip install --upgrade archinstall`.
 
 ## Upgrade `archinstall` on live Arch ISO image
 
@@ -36,8 +37,8 @@ pacman -Syu
 When booting from a live USB, the space on the ramdisk is limited and may not be sufficient to allow running a re-installation or upgrade of the installer.
 In case one runs into this issue, any of the following can be used
 
-* Resize the root partition https://wiki.archlinux.org/title/Archiso#Adjusting_the_size_of_the_root_file_system
-* Specify the boot parameter copytoram=y (https://gitlab.archlinux.org/archlinux/mkinitcpio/mkinitcpio-archiso/-/blob/master/docs/README.bootparams#L26) which will copy the root filesystem to tmpfs
+* Resize the root partition https://github.com/nihitdev/title/Archiso#Adjusting_the_size_of_the_root_file_system
+* Specify the boot parameter copytoram=y (https://github.com/nihitdev/archlinux/mkinitcpio/mkinitcpio-archiso/-/blob/master/docs/README.bootparams#L26) which will copy the root filesystem to tmpfs
 
 ## Running the [guided](https://github.com/archlinux/archinstall/blob/master/archinstall/scripts/guided.py) installer
 
@@ -133,7 +134,7 @@ For an example of a fully scripted, interactive installation please refer to the
 [interactive_installation.py](https://github.com/archlinux/archinstall/blob/master/archinstall/scripts/guided.py)
 
 
-> **To create your own ISO with this script in it:** Follow [ArchISO](https://wiki.archlinux.org/index.php/archiso)'s guide on creating your own ISO.
+> **To create your own ISO with this script in it:** Follow [ArchISO](https://github.com/nihitdev/index.php/archiso)'s guide on creating your own ISO.
 
 ## Script non-interactive automated installation
 
@@ -192,7 +193,7 @@ It will go through everything from packaging, building and running *(with qemu)*
 
 You may want to boot an ISO image in a VM to test `archinstall` in there.
 
-* Download the latest [Arch ISO](https://archlinux.org/download/)
+* Download the latest [Arch ISO](https://github.com/nihitdev/download/)
 * Use the the below command to boot the ISO in a VM
 
 ```
@@ -221,7 +222,7 @@ qemu-system-x86_64 -enable-kvm \
 
 ## AUR
 
-`archinstall` will not offer or bundle AUR helpers or AUR packages due to a current consensus. This is not any individual developers decision. The reasons and discussions for this stance on the topic can be found on our mailing list thread: [(optional) AUR helper in archinstall](https://lists.archlinux.org/archives/list/arch-dev-public@lists.archlinux.org/thread/VYOULH2GOJLFM2BXOFLWH3D754YXFPSL/).
+`archinstall` will not offer or bundle AUR helpers or AUR packages due to a current consensus. This is not any individual developers decision. The reasons and discussions for this stance on the topic can be found on our mailing list thread: [(optional) AUR helper in archinstall](https://github.com/nihitdev/archives/list/arch-dev-public@github.com/nihitdev/thread/VYOULH2GOJLFM2BXOFLWH3D754YXFPSL/).
 
 ## Keyring out-of-date
 For a description of the problem see https://archinstall.archlinux.page/help/known_issues.html#keyring-is-out-of-date-2213 and discussion in issue https://github.com/archlinux/archinstall/issues/2213.
@@ -251,7 +252,7 @@ To install Arch Linux alongside an existing Windows installation using  `archins
 # Mission Statement
 
 Archinstall promises to ship a [guided installer](https://github.com/archlinux/archinstall/blob/master/archinstall/scripts/guided.py) that follows
-the [Arch Linux Principles](https://wiki.archlinux.org/index.php/Arch_Linux#Principles) as well as a library to manage services, packages, and other Arch Linux aspects.
+the [Arch Linux Principles](https://github.com/nihitdev/index.php/Arch_Linux#Principles) as well as a library to manage services, packages, and other Arch Linux aspects.
 
 The guided installer ensures a user-friendly experience, offering optional selections throughout the process. Emphasizing its flexible nature, these options are never obligatory.
 In addition, the decision to use the guided installer remains entirely with the user, reflecting the Linux philosophy of providing full freedom and flexibility.
@@ -267,3 +268,7 @@ Therefore, Archinstall will try its best to not introduce any breaking changes e
 # Contributing
 
 Please see [CONTRIBUTING.md](https://github.com/archlinux/archinstall/blob/master/CONTRIBUTING.md)
+
+
+
+

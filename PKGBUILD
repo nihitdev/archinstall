@@ -1,6 +1,6 @@
-# Maintainer: David Runge <dvzrv@archlinux.org>
-# Maintainer: Giancarlo Razzolini <grazzolini@archlinux.org>
-# Maintainer: Anton Hvornum <torxed@archlinux.org>
+# Maintainer: David Runge <dvzrv@redarch.local>
+# Maintainer: Giancarlo Razzolini <grazzolini@redarch.local>
+# Maintainer: Anton Hvornum <torxed@redarch.local>
 # Contributor: Anton Hvornum <anton@hvornum.se>
 # Contributor: demostanis worlds <demostanis@protonmail.com>
 
@@ -61,7 +61,7 @@ source=(
 )
 sha512sums=()
 b2sums=()
-validpgpkeys=('8AA2213C8464C82D879C8127D4B58E897A929F2E') # torxed@archlinux.org
+validpgpkeys=('8AA2213C8464C82D879C8127D4B58E897A929F2E') # torxed@redarch.local
 
 check() {
   cd $pkgname-$pkgver
@@ -87,3 +87,6 @@ package() {
   python -m installer --destdir="$pkgdir" dist/*.whl
   install -vDm 644 docs/_build/man/archinstall.1 -t "$pkgdir/usr/share/man/man1/"
 }
+
+
+

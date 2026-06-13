@@ -212,7 +212,7 @@ class OptionListScreen(BaseScreen[ValueT]):
 	}
 
 	OptionList > .option-list--option-highlighted {
-		background: blue;
+		background: red;
 		color: white;
 		text-style: bold;
 	}
@@ -446,7 +446,7 @@ class SelectListScreen(BaseScreen[ValueT]):
 	}
 
 	SelectionList > .option-list--option-highlighted {
-		background: blue;
+		background: red;
 		color: white;
 		text-style: bold;
 	}
@@ -668,7 +668,7 @@ class ConfirmationScreen(BaseScreen[ValueT]):
 	}
 
 	Button.-active {
-		background: blue;
+		background: red;
 		color: white;
 		border: none;
 		text-style: none;
@@ -1202,7 +1202,7 @@ class _AppInstance(App[ValueT]):
 		height: auto;
 		width: 100%;
 		content-align: center middle;
-		background: blue;
+		background: red;
 		color: white;
 		text-style: bold;
 	}
@@ -1245,7 +1245,7 @@ class _AppInstance(App[ValueT]):
 	}
 
 	Input:focus {
-		border: solid blue;
+		border: solid red;
 	}
 
 	Footer {

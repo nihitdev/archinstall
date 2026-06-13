@@ -219,7 +219,7 @@ class Installer:
 		# time.sleep(1)
 
 		if not skip_wkd:
-			info(tr('Waiting for Arch Linux keyring sync (archlinux-keyring-wkd-sync) to complete.'))
+			info(tr('Waiting for Red Arch keyring sync (archlinux-keyring-wkd-sync) to complete.'))
 			# Wait for the timer to kick in
 			while self._service_started('archlinux-keyring-wkd-sync.timer') is None:
 				time.sleep(1)
@@ -704,7 +704,7 @@ class Installer:
 		return False
 
 	def activate_time_synchronization(self) -> None:
-		info('Activating systemd-timesyncd for time synchronization using Arch Linux and ntp.org NTP servers')
+		info('Activating systemd-timesyncd for time synchronization using Red Arch and ntp.org NTP servers')
 		self.enable_service('systemd-timesyncd')
 
 	def enable_espeakup(self) -> None:
@@ -807,7 +807,7 @@ class Installer:
 					self.enable_service('iwd')
 
 		# Enable systemd-resolved by (forcefully) setting a symlink
-		# For further details see  https://wiki.archlinux.org/title/Systemd-resolved#DNS
+		# For further details see  https://github.com/nihitdev/title/Systemd-resolved#DNS
 		resolv_config_path = self.target / 'etc/resolv.conf'
 		resolv_config_path.unlink(missing_ok=True)
 		resolv_config_path.symlink_to('/run/systemd/resolve/stub-resolv.conf')
@@ -1225,7 +1225,7 @@ class Installer:
 			f"""\
 			# Created by: archinstall
 			# Created on: {self.init_time}
-			title	Arch Linux ({{kernel}})
+			title	Red Arch ({{kernel}})
 			linux	/vmlinuz-{{kernel}}
 			initrd	/initramfs-{{kernel}}.img
 			options {' '.join(self._get_kernel_params(root))}
@@ -1292,7 +1292,7 @@ class Installer:
 				self.arch_chroot(f'bootctl --no-variables {" ".join(bootctl_options)} install')
 
 		# Loader configuration is stored in ESP/loader:
-		# https://man.archlinux.org/man/loader.conf.5
+		# https://github.com/nihitdev/man/loader.conf.5
 		loader_conf = self.target / efi_partition.relative_mountpoint / 'loader/loader.conf'
 		# Ensure that the ESP/loader/ directory exists before trying to create a file in it
 		loader_conf.parent.mkdir(parents=True, exist_ok=True)
@@ -1524,7 +1524,7 @@ class Installer:
 						' --create'
 						f' --disk {parent_dev_path}'
 						f' --part {efi_partition.partn}'
-						' --label "Arch Linux Limine Bootloader"'
+						' --label "Red Arch Limine Bootloader"'
 						f" --loader '{loader_path}'"
 						' --unicode'
 						' --verbose',
@@ -1588,7 +1588,7 @@ class Installer:
 					f'path: boot():/EFI/Linux/arch-{kernel}.efi',
 					f'cmdline: {kernel_params}',
 				]
-				config_contents += f'\n/Arch Linux ({kernel})\n'
+				config_contents += f'\n/Red Arch ({kernel})\n'
 				config_contents += '\n'.join(f'    {it}' for it in entry) + '\n'
 			else:
 				entry = [
@@ -1597,7 +1597,7 @@ class Installer:
 					f'cmdline: {kernel_params}',
 					f'module_path: {path_root}:/initramfs-{kernel}.img',
 				]
-				config_contents += f'\n/Arch Linux ({kernel})\n'
+				config_contents += f'\n/Red Arch ({kernel})\n'
 				config_contents += '\n'.join(f'    {it}' for it in entry) + '\n'
 
 		config_path.write_text(config_contents)
@@ -1644,7 +1644,7 @@ class Installer:
 			'--part',
 			str(boot_partition.partn),
 			'--label',
-			'Arch Linux ({kernel})',
+			'Red Arch ({kernel})',
 			'--loader',
 			loader,
 			'--unicode',
@@ -1711,7 +1711,7 @@ class Installer:
 
 		for kernel in self.kernels:
 			if uki_enabled:
-				entry = f'"Arch Linux ({kernel}) UKI" "{kernel_params}"'
+				entry = f'"Red Arch ({kernel}) UKI" "{kernel_params}"'
 			else:
 				if boot_on_root:
 					# Kernels are in /boot subdirectory of root filesystem
@@ -1729,7 +1729,7 @@ class Installer:
 				else:
 					# Kernels are at root of their partition (ESP or separate boot partition)
 					initrd_path = f'initrd=\\initramfs-{kernel}.img'
-				entry = f'"Arch Linux ({kernel})" "{kernel_params} {initrd_path}"'
+				entry = f'"Red Arch ({kernel})" "{kernel_params} {initrd_path}"'
 
 			config_contents.append(entry)
 
@@ -2141,3 +2141,4 @@ def run_custom_user_commands(commands: list[str], installation: Installer) -> No
 		SysCommand(f'arch-chroot -S {installation.target} bash {script_path}')
 
 		os.unlink(chroot_path)
+

@@ -625,7 +625,7 @@ async def suggest_single_disk_layout(
 
 	available_space = available_space.align()
 
-	# Used for reference: https://wiki.archlinux.org/title/partitioning
+	# Used for reference: https://github.com/nihitdev/title/partitioning
 
 	boot_partition = _boot_partition(sector_size, using_gpt)
 	device_modification.add_partition(boot_partition)
@@ -874,3 +874,4 @@ async def suggest_lvm_layout(
 		lvm_vol_group.volumes.append(home_vol)
 
 	return LvmConfiguration(LvmLayoutType.Default, [lvm_vol_group])
+

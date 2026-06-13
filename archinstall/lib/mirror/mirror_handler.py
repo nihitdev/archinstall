@@ -51,7 +51,7 @@ class MirrorListHandler:
 				self.load_local_mirrors()
 
 	def load_remote_mirrors(self) -> bool:
-		url = 'https://archlinux.org/mirrors/status/json/'
+		url = 'https://github.com/nihitdev/mirrors/status/json/'
 		attempts = 3
 
 		for attempt_nr in range(attempts):
@@ -150,7 +150,7 @@ class MirrorListHandler:
 					active=True,
 					country=current_region or 'Worldwide',
 					# The following values are normally populated by
-					# archlinux.org mirror-list endpoint, and can't be known
+					# github.com/nihitdev mirror-list endpoint, and can't be known
 					# from just the local mirror-list file.
 					country_code='WW',
 					isos=True,
@@ -162,3 +162,7 @@ class MirrorListHandler:
 				mirror_list[current_region].append(mirror_entry)
 
 		return mirror_list
+
+
+
+

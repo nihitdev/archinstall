@@ -12,7 +12,7 @@ But the library can be installed manually as well.
 Installing with pacman
 ----------------------
 
-Archinstall is on the `official repositories <https://wiki.archlinux.org/index.php/Official_repositories>`_.
+Archinstall is on the `official repositories <https://github.com/nihitdev/index.php/Official_repositories>`_.
 And it will also install archinstall as a python library.
 
 To install both the library and the archinstall script:
@@ -57,3 +57,4 @@ Or you can PyPa's `build <https://github.com/pypa/build>`_ and `installer <https
     $ cd archinstall
     $ python -m build .
     $ python -m installer dist/*.whl
+

@@ -15,7 +15,7 @@ Archinstall ships with a pre-programmed `Guided Installer`_ guiding you through 
 
 
 .. warning::
-    The installer will not configure WiFi before the installation begins. You need to read up on `Arch Linux networking <https://wiki.archlinux.org/index.php/Network_configuration>`_ before you continue.
+    The installer will not configure WiFi before the installation begins. You need to read up on `Arch Linux networking <https://github.com/nihitdev/index.php/Network_configuration>`_ before you continue.
 
 Running the guided installation
 -------------------------------
@@ -300,3 +300,4 @@ Below is an example of how to set the root password and below that are descripti
 
 .. _scripts: https://github.com/archlinux/archinstall/tree/master/archinstall/scripts
 .. _Guided Installer: https://github.com/archlinux/archinstall/blob/master/archinstall/scripts/guided.py
+

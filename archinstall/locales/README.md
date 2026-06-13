@@ -18,7 +18,7 @@ For full disk encryption (LUKS2) or grub-shell, boot options edit: this means al
 Archinstall validates this by making sure your passwords are ASCII compatible.
 It is quite trivial through Login-manager and/or Desktop Environment to set other layouts or switching later-on.
 
-For full `at_keyboard` support it is possible through `ckbcomp` See guide [here](https://fitzcarraldoblog.wordpress.com/2019/04/21/how-to-change-the-keymap-keyboard-layout-used-by-the-grub-shell-in-gentoo-linux/) And [ckbcomp<sup>AUR</sup>](https://aur.archlinux.org/packages/ckbcomp)
+For full `at_keyboard` support it is possible through `ckbcomp` See guide [here](https://fitzcarraldoblog.wordpress.com/2019/04/21/how-to-change-the-keymap-keyboard-layout-used-by-the-grub-shell-in-gentoo-linux/) And [ckbcomp<sup>AUR</sup>](https://github.com/nihitdev/packages/ckbcomp)
 
 By default bootloaders look for `vconsole.conf` keymap. Other bootloaders such as `systemd-boot` and `limine` have full keymap support.
 
@@ -58,3 +58,4 @@ msgstr "Wollen sie wirklich abbrechen?"
 After the translations have been written, run the script once more `./locales_generator.sh <lang_abbr>` and it will auto-generate the `base.mo` file with the included translations.
 
 After that you're all ready to go and enjoy Archinstall in the new language :)
+

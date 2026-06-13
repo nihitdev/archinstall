@@ -51,7 +51,7 @@ body:
       description: >
         Please describe your issue as best as you can.
         And please consider personal preferences vs what the recommended
-        steps/values are in https://wiki.archlinux.org/title/Installation_guide
+        steps/values are in https://github.com/nihitdev/title/Installation_guide
         as we try to abide by them as best we can.
       value: |
         #### Description of the issue
@@ -83,3 +83,4 @@ body:
         But it will grately help us in testing if we can generate the specific qemu command line,
         for instance via:
         `sudo virsh domxml-to-native qemu-argv --domain my-arch-machine`
+

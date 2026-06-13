@@ -25,8 +25,9 @@
     "timezone": "Europe/Stockholm",
     "version": "2.3.1.dev0",
     "custom_commands": [
-        "cd /home/devel; git clone https://aur.archlinux.org/paru.git",
+        "cd /home/devel; git clone https://github.com/nihitdev/paru.git",
         "chown -R devel:devel /home/devel/paru",
         "usermod -aG docker devel"
     ]
 }
+

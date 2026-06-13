@@ -27,7 +27,7 @@ dependencies = [
 ]
 
 [project.urls]
-Home = "https://archlinux.org"
+Home = "https://github.com/nihitdev"
 Documentation = "https://archinstall.readthedocs.io/"
 Source = "https://github.com/archlinux/archinstall"
 
@@ -260,3 +260,4 @@ ignore = [
 
 [tool.ruff.lint.mccabe]
 max-complexity = 40
+
